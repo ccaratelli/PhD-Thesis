@@ -1,0 +1,808 @@
+\graphicspath{{figures/}}
+% Header
+\renewcommand\evenpagerightmark{{\scshape\small Major research results}}
+\renewcommand\oddpageleftmark{{\scshape\small Chapter 3}}
+
+%\renewcommand{\bibname}{References}
+
+\hyphenation{}
+
+\chapter[Major research results]%
+{Major research results}
+\label{ch3}
+Within this Chapter the main research results obtained within the framework of
+this thesis will be presented. The main goal was the study of defects and active
+sites within UiO--66. Various reactions were considered, such as
+citronellal cyclization, aldol condensation, Oppenauer oxidation and Fischer
+esterification in
+collaboration with experimental partners (Figure \ref{fig:reactionmechanisms},
+Chapter 1).
+To obtain a correct mechanistic view on each of these reactions, it is essential to properly account for the complexity.
+Complexity may entail effects like framework
+flexibility, influence of solvent and dynamic change of the nature of active
+sites. In some cases it was sufficient to model the reaction steps using
+periodic DFT calculations in a static approach.
+During the time frame of the PhD it became possible and necessary to go beyond this approach
+and explicitly study the dynamics of the system including the effect of other
+guest species and temperature. In this Chapter, the most
+significant results and conclusions of the corresponding papers are highlighted.
+More details can be found in the original articles, which are enclosed in Part
+II. 
+
+
+%% Major research results
+%%%%%%%%%%%%%%%
+\newpage
+\section{Open metal sites due to structural defects in UiO--66}
+The UiO--66 material is a showcase example of an extremely stable MOF, which
+maintains its integrity while allowing structural deformations during
+activation processes. For UiO--66, recent discoveries have
+revealed that after defect engineering the material possesses not only Lewis acid sites but also a substantial amount of Br\o{}nsted sites which show
+remarkable chemical behavior in the form of dynamic acidity and may take an
+interactive role in reactions where proton transfers are necessary (Figure
+\ref{fig:lewisbronsted}).
+The findings presented in this Chapter could be extended to other Zr based MOFs
+to understand their properties and fine--tune these materials to obtain
+target catalytic functions.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.0\textwidth]{lewisbronsted}
+	\caption{Schematic representation of Lewis and Br\o{}nsted sites present in
+	UiO--66 upon linker removal.}
+	\label{fig:lewisbronsted}
+\end{figure}
+
+\newpage
+\subsection*{Effect of modulator}
+The strength of MOFs is their versatility and their potential to be tuned for a
+given application. Specifically for UiO--66 different synthesis procedures were
+used to alter the chemical structure of the material. In
+particular, during the MOF preparation, monocarboxylic acids which are in
+competition with bi- or polycipital linkers to coordinate to the metal sites can
+prevent the connection between two inorganic bricks, creating linker
+deficiencies \cite{Vermoortele2013}.
+Experimentally UiO--66 was synthesized using different modulation approaches and the effect of the type and amount of modulator added during synthesis was perceived to determine the degree to which structural defects are created \cite{Vermoortele2013, Shearer2016, Cliffe2014, Morris2017mod}. From a theoretical viewpoint in
+\textbf{Paper I}, we investigated the role of modulating species such as
+trifluoroacetic acid (TFA), hydrochloric acid (HCl) and water in the creation and stabilization of linker vacancies \cite{Vandichel2015}. By constructing free energy diagrams, we found that during the synthesis of UiO--66 with an excess concentration of TFA in the reaction mixture, the Zr atoms may adsorb two TFA groups instead of one BDC linker. This
+project was performed in a close collaboration with the group of Prof. Dirk De
+Vos in which these features were observed experimentally. We further showed that
+the presence of HCl facilitates the formation of defects which was also seen in
+the Fourier--transform infrared spectroscopy (FTIR) by DeCoste \textit{et
+al.}\cite{DeCoste2013}. Furthermore, at the low temperature synthesis, below 423
+K, the addition of hydrochloric acid enables the replacement of hydroxyl groups
+in the inorganic node by incorporation of chloride anions. As can be seen in
+Figure \ref{fig:figure_Paper1a}, the formation of linker defects is certainly not thermodynamically driven, but the addition of modulators such as TFA or HCl lowers the free energy required for the formation of linker deficiency. The amount of defects can be
+concentration driven, and expands with increasing amount of a modulator
+concentration, which is in competition with BDC. Furthermore, postsynthetic
+activation procedures at elevated temperatures result in substantial removal of the capping ligands,
+leaving more coordinatively unsaturated Zr Lewis acid sites. This concept can be
+extended to other MOFs.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper1a}
+	\caption[Schematic representation of the calculated structures with different
+	capping ligands.]{Schematic representation of the calculated structures with different
+	capping ligands. Free energy differences are reported with respect to
+the reference configuration X(BDC) during synthesis conditions (T = 403 K,
+p = 1 bar). The
+results were obtained in a periodic calculation with the PBE--D3(BJ)
+functional, employing an energy cutoff of 400 eV. Adapted from Ref.
+\cite{Vandichel2015} with permission of the Royal Society of Chemistry, copyright 2015.}
+	\label{fig:figure_Paper1a}
+\end{figure}
+
+\newpage
+\subsection*{Dehydration mechanism of UiO-66}
+Dehydration of UiO--66 occurs at elevated temperature in the range between 523
+- 573 K.
+The entropy driven activation conditions promote the dehydration process of the material, which results in the removal of water from the inorganic
+brick, and is schematically shown in Figure \ref{fig:figure_Paper1b}. For the
+first time the mechanistic pathway for the initial dehydration process of the
+inner \ce{Zr6O4(OH4)} brick of UiO--66 was proposed in \textbf{Paper I} and the reaction was studied on the material with one missing linker with unit cell formula 
+\ce{[Zr6O4(OH)4(RCOO)12][Zr6O6(OH)2(RCOO)10]} \cite{Vandichel2015}.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper1b}
+	\caption[At the top of the figure, the structure of the modeled UiO--66
+crystal is displayed with indication of the unit cell. Zr--brick 1 with
+formula \ce{[Zr6O4(OH)4(RCOO)12]} is intact with no missing linker, while
+brick 2 \ce{[Zr6O6(OH)2(RCOO)10]} has one missing terephthalate linker.]{At the top of the figure, the structure of the modeled UiO--66
+crystal is displayed with indication of the unit cell. Zr--brick 1 with
+formula \ce{[Zr6O4(OH)4(RCOO)12]} is intact with no missing linker, while
+brick 2 \ce{[Zr6O6(OH)2(RCOO)10]} has one missing terephthalate linker. Adapted
+from Ref. \cite{Vandichel2015} with permission of the Royal Society of Chemistry, copyright 2015.}
+	\label{fig:figure_Paper1b}
+\end{figure}
+\npar
+A two--step procedure was applied to gain a profound molecular insight into
+this process and involved intermediate structures. Initially, the energy
+surface was explored by performing a series of MD simulations based on
+NPT ensemble with variable volume at a pressure of $10^{-9}$
+bar. The initial structure for the MD was chosen to have the hydroxyl groups
+ordered in a fully symmetrical way representing the lowest energetically
+configuration for UiO--66. During simulations, the temperature was gradually
+increased to gain structural insight into temperature--induced distortions which
+lead to dehydration. The most common distortion pattern which was observed along the MD
+trajectory showed simultaneous decoordination of a 
+\ce{{\textmu}3}--OH hydroxyl group together with one BDC linker, 
+and was taken as an initial structure for the following static geometry optimizations. Subsequently, 
+the electronic energy profile was obtained after performing a series of NEB
+simulations between initial and end structure (Chapter \ref{ch2}). The potential
+energy surface reveals the appearance of two transition states and some
+metastable configurations as displayed in Figure \ref{fig:figure_Paper1c}.
+As it was deduced form the MD simulations, the process was initiated by the
+\ce{{\textmu}1}--OH hydroxyl group configuration and decoordinated BDC linker.
+The hydroxyl group changes its coordination from 3 (\ce{{\textmu}3}--OH) to 1
+(\ce{{\textmu}1}-OH) by traveling to another site of the inorganic brick and
+subsequently undergoes protonation with another \ce{{\textmu}3}--OH hydroxyl
+group to form water. The highest point on the profile which corresponds to a first transition state is encountered in structure 7. In this configuration one linker is decoordinated with the
+carboxylic oxygen from the Zr atom and the hydroxyl group is detached from two
+Zr atoms. After that, some intermediate, metastable structures are observed,
+where the linker is in the chelated state being coordinated with two O atoms
+to the same Zr atom (structure 12). When the decoordinated hydroxyl
+group is on the other side of the inorganic brick, the linker recoordinates to the parent position (structure 20). This configuration represents a local minimum on the potential energy surface. Subsequently, the released hydroxyl group abstracts a proton of another available 
+\ce{{\textmu}3}--OH group (structure 23), which results in the formation of a
+water molecule (structure 27) and partly dehydrated inorganic brick. It should
+be noted that the studied UiO--66 structure can undergo two additional
+dehydration reactions (Figure
+\ref{fig:figure_Paper1b}), which were further investigated in \textbf{Paper II}.
+Moreover, the presence of missing linkers can also affect this process
+substantially.
+
+\begin{figure}[!htp]
+%\vspace{-2cm}
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper1c}
+	\caption[Electronic energy profile for the first dehydration reaction.
+The relevant atoms leading to the final removal of water are encircled.
+The linkers, which are not involved in the dehydration, are not
+displayed. The electronic energies were obtained from an energy
+refinement (on all the images) with the PBE--D3(BJ) functional,
+employing an energy cutoff of 400 eV.]{Electronic energy profile for the first dehydration reaction.
+The relevant atoms leading to the final removal of water are encircled.
+The linkers, which are not involved in the dehydration, are not
+displayed. The electronic energies were obtained from an energy
+refinement (on all the images) with the PBE--D3(BJ) functional,
+employing an energy cutoff of 400 eV. Adapted from Ref.\cite{Vandichel2015} with
+permission of the Royal Society of Chemistry, copyright 2015.}
+	\label{fig:figure_Paper1c}
+\end{figure}
+
+\newpage
+\subsection*{Effect of missing linkers on dehydration}
+A thorough understanding of the influence of various linker deficiency in
+UiO--66 on the dehydration mechanism at reaction conditions was reported in
+\textbf{Paper II} \cite{Vandichel2016}. A total of six defect structures
+were generated with a different number and position of missing linkers.
+The dehydration mechanism remains the same for all structures. However,
+the influence of defects on the dehydration processes is yet unknown and it is very
+challenging to study this effect experimentally. To obtain a molecular insight
+into the dehydration mechanism of the six different structures of UiO--66 the
+same methodology as in the \textbf{Paper I} was applied making use of
+NEB calculations.
+As discussed earlier, the dehydration of the material occurs at elevated
+temperature. To account for the thermal corrections, all local minima and
+transition states were further optimized employing a stronger convergence
+criterion for the electronic self--consistent field (SCF) problem. The vibrational mode analysis was then performed on the
+stationary points by computing full Hessian frequency calculations. In this
+context we described structural deformations, therefore a full Hessian
+approach, with frequency calculations that include all the atoms, was required
+to properly account for the entropic contribution. Only positive eigenvalues were seen for minima, while for transition states the presence of one negative eigenvalue corresponding to the right normal mode verified that the system was in a first order saddle point.
+For all 12--fold coordinated bricks the removal of the second water molecule is
+higher activated than the first one. The endothermic nature of the dehydration
+process was also confirmed experimentally by Shearer \textit{et
+al.}\cite{Shearer2013}. Herein, it was found that water removal becomes easier
+and the process is lower activated when defects are located nearby pointing out that they might be correlated.
+\npar
+In \textbf{Paper I}, we postulated the
+dehydration reaction as a two--step process which proceeds through the
+intermediate dangling OH--groups (configuration 20, Figure
+\ref{fig:figure_Paper1c}). Shearer \textit{et
+al.}\cite{Shearer2013} performed
+\textit{in situ} IR experiment in which the temperature was gradually increased
+and observed the presence of extra OH bands appearing at 3600--3700
+cm\ce{^-^1}. This clearly indicates structural rearrangements during thermal
+activation. Theoretically obtained \textit{ab initio} IR spectrum on the cluster
+model of UiO-66 with a decoordinated, dangling OH group demonstrates that the stretching
+mode frequency of the hydroxyl group shifts to lower wavenumbers,
+entirely confirming experimental observations (Figure \ref{fig:figure_Paper2a}).
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper2a}
+	\caption[\textit{Ab initio} IR--spectra of a Zr--brick with a dangling
+	OH--bond. Derived from a cluster model with level of theory B3LYP/(6--31g(d)+
+	LanL2DZ).
+	The \textit{ab initio} spectrum was scaled with a factor 0.96.]{\textit{Ab initio} IR--spectra of a Zr--brick with a
+	dangling OH--bond.
+	Derived from a cluster model with level of theory B3LYP/(6--31g(d)+LanL2DZ).
+	The \textit{ab initio} spectrum was scaled with a factor 0.96. Reprinted from
+	Ref.\cite{Vandichel2016} with permission of the Royal Society of Chemistry,
+	copyright 2016.}
+	\label{fig:figure_Paper2a}
+\end{figure}
+\npar
+\newpage
+It may be anticipated that introducing a large
+concentration of defects has also a large impact on the mechanical properties of the
+material. Recently Yot \textit{et al.}\cite{Yot2016} investigated the
+mechanical behavior of UiO--66 by means of high-pressure powder
+X-Ray diffraction studies up to 3.5 GPa. It was observed that the
+material showed a gradual pressure--induced reversible decrease of
+crystallinity. The bulk modulus of the material was determined to be 17 GPa and
+by introducing amino functionalization this value even 
+increased to 25 GPa. This observation points
+towards a high mechanical robustness of the UiO-66 type of materials on top of
+their already well known thermal and chemical stability. However, the detailed
+effect of the amount and correlation of missing linkers in the material was not
+explored. From theoretical point of view Wu \textit{et al.}\cite{Wu2013} reported, using
+periodic DFT calculations the bulk modulus of 41 GPa for the defect free UiO--66
+structure. Hereby, for each of the proposed defect structures we investigated
+the bulk modulus, to elucidate the influence of a varying number of linker
+deficiencies on the mechanical behavior. Our results showed that bulk modulus is
+strongly affected by the number of missing linkers but also the precise position
+of the defects, which was also observed in a later, more extensive study by
+Rogge \textit{et al.}\cite{Rogge2016}.
+In \textbf{Paper II} we also investigated the evolution of the bulk modulus on
+the dehydrated structures of UiO--66 proving that this process barely affects
+the robustness of UiO--66.
+
+\newpage
+\subsection*{Inherent flexibility of UiO--66}
+In \textbf{Paper III}, we made a major step forward in the structural understanding of the
+inert Zr--based MOFs, by using enhanced sampling MD simulations
+which accelerate sampling of higher activated regions on the free energy 
+surface. Application of theses methods allow following \textit{in situ} the
+fast dynamic changes in the coordination number of the framework metals during
+different activation processes which are realized experimentally. The UiO--66
+material is a showcase example of an extremely stable MOF, 
+which maintains its integrity while allowing structural deformations during
+activation processes such as linker exchange, dehydration and defects
+formation \cite{Kim2012a, Kim2012, Horike2009, Leus2016}. Recently, by using
+ultrafast 2--D IR spectroscopy, structural fluctuations were shown in
+functionalized Zr--based MOFs \cite{Nishida2014}, yet the understanding at a
+molecular level of the intrinsic dynamics that drive these processes represents a puzzle which is almost impossible to fully solve on a purely experimental basis.
+Hereby, we used the US methodology to enhance the sampling of low probability
+regions along certain coordinates of the system. We showed that by examining the UiO-66 system at 573 K, thus at the
+dehydration temperature of this material,
+the coordination number of the hydroxyl group bridging the Zr atoms of the
+inorganic brick changes from 3 to 1 (Figure \ref{fig:figure_Paper3a}). During
+this process internal deformation modes were detected pointing to reversible linker decoordination.
+We defined the collective variable by means of the coordination number based on
+the distance between the hydroxyl group and the three surrounding Zr atoms, as
+schematically shown in Figure \ref{fig:figure_Paper3a}. With this choice, during
+the simulations we discriminated five classes of configurations which vary in
+the degree of coordination of the hydroxyl group with Zr
+atoms going from a 3--fold to a 1--fold coordination, as displayed in Figure
+\ref{fig:figure_Paper3a} \cite{Hajek2018}. A first exploration of the reaction
+path characterized by this CV has been
+performed by means of a constrained MD simulation. This constrained MD method
+takes the form of a moving umbrella which during the whole duration of the MD
+crosses the entire range of CV with a constant velocity. In this simulation, a bias potential is moved smoothly along the reaction
+coordinate to drive the system from the reactant to the product state at the same
+conditions. This is a crucial step in the US methodology which allows selecting
+of the various windows on the reaction path along the CV and determining the
+initial structures in each of these windows.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper3a}
+	\caption[Schematic representation of the applied collective variable. Three
+	critical \ce{Zr-O} distances, represented with solid purple, yellow and red
+	lines are used as input in the formal definition of the collective variable.
+	Free energy profile at 573 K along the reaction path to dehydration. Some
+	essential turning points on the profile are indicated with a schematic display
+	of their respective configurations. Probability distributions regarding the
+	type of coordination of the hydroxyl group with respect to the Zr--centers
+	measured during the US simulation are reported in the bottom.]{Schematic representation of the applied collective variable. Three
+	critical \ce{Zr-O} distances, represented with solid purple, yellow and red
+	lines are used as input in the formal definition of the collective variable.
+	Free energy profile at 573 K along the reaction path to dehydration. Some
+	essential turning points on the profile are indicated with a schematic display
+	of their respective configurations. Probability distributions regarding the
+	type of coordination of the hydroxyl group with respect to the Zr--centers
+	measured during the US simulation are reported in the bottom. Reprinted from
+	Ref.\cite{Hajek2018} with permission of the Royal Society of
+Chemistry, copyright 2018.}
+	\label{fig:figure_Paper3a}
+\end{figure}
+\npar
+Configuration 1 at 573 K corresponds to the equilibrium structure.
+In this case, each of the six Zr atoms in the brick is 8--fold
+coordinated an the four \ce{{\textmu}3}--OH groups are ordered
+symmetrically in a tetrahedral fashion. Activation of the system towards configuration 2 requires
+20 kJ/mol of free energy. From the analysis of the US simulations we can obtain more
+information on the type of connection between the oxygen and the three Zr atoms
+by inspecting the probability distributions for each of
+the configurations. In the pristine UiO--66, the relatively mobile nature of the
+\ce{{\textmu}3}--OH group is displayed by a loosely connected
+OH--bond with one of the Zr atoms, which is equally distributed between the three Zr atoms. Furthermore,
+the dehydration process is initiated by configuration 2, as a subsequent
+evolution towards lower coordination numbers does not reveal any
+\ce{{\textmu}3}--OH configurations. In configuration 3 the
+hydroxyl group is covalently bonded to only one of the Zr atoms, but
+additionally it maintains the coordination bond with one of the two remaining Zr
+atoms.
+This is a crucial point along the reaction path where we see for the first
+time the elongation in the M--L bond and out--of--plane deformation of the
+phenyl ring. These explain the increased free energy and give a clear
+indication that the system enters the transition state region. The broad set of
+structures encountered after configuration 3 possesses substantial linker
+mobility. The internal deformation modes in the configuration of type 4 include
+linker decoordination, translation, rotation and recoordination and are observed
+for the four linkers bonded to the same Zr atom. In Figure \ref{fig:figure_Paper3b} two possible
+motions of the BDC linker are displayed.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figure_Paper3b}
+	\caption[Umbrella sampling in two windows of CV = 1.45 and 1.51, showing two
+	distinct motions of the linkers. On the left column, a translation of the
+	linker L1 generates a chelated structure and a subsequent shift in the
+	carboxylic oxygen connected to Zr2 (configuration 4t). On the right column, a
+	rotation of the linker L1 and a partial decoordination of linker L2 forming a
+	hydrogen bond with an \ce{{\textmu}3}--OH hydroxyl group is shown
+	(configuration 4r). A proton transfer between the carboxylic oxygen O3 and the
+	bridging \ce{{\textmu}3}--O is also observed, indicating the occurrence of an
+	intrinsic dynamic acidity. Colors indicate the coordination number of Zr atoms.]{Umbrella sampling in two windows of CV = 1.45 and 1.51, showing two
+	distinct motions of the linkers. On the left column, a translation of the
+	linker L1 generates a chelated structure and a subsequent shift in the
+	carboxylic oxygen connected to Zr2 (configuration 4t). On the right column, a
+	rotation of the linker L1 and a partial decoordination of linker L2 forming a
+	hydrogen bond with an \ce{{\textmu}3}--OH hydroxyl group is shown
+	(configuration 4r). A proton transfer between the carboxylic oxygen O3 and the
+	bridging \ce{{\textmu}3}--O is also observed, indicating the occurrence of an
+	intrinsic dynamic acidity. Colors indicate the coordination number of Zr atoms.
+	Reprinted from Ref.\cite{Hajek2018} with permission of the Royal Society of
+	Chemistry, copyright 2018.}
+	\label{fig:figure_Paper3b}
+\end{figure}
+\npar
+The first motion illustrates the
+translation of the linker along the axis of the two Zr atoms to which it is
+bonded (Figure \ref{fig:figure_Paper3b}, left column). In this case the intermediary chelated structure
+was perceived. The second motion which is schematically shown in the right
+column of Figure \ref{fig:figure_Paper3b} 
+corresponds to a rotation mode along the \ce{Zr-O} bond. The direct consequence
+of rotation of this linker is the decoordination of another linker which is
+bonded to the same Zr atom. This second linker is immediately coordinated to the
+nearest \ce{{\textmu}3}--OH gaining the stabilization due to a proton shuttle between the hydroxyl group and the carboxylic oxygen of
+the linker. Such proton shuttles may also be
+facilitated by the presence of other guest species in the pores, such as
+methanol (\textbf{Paper VIII}). These results expand the earlier concept of
+dynamic acidity introduced by Ling and Slater \cite{Ling2016} and in
+\textbf{Paper II} in the defective UiO--66 to defect--free material where guest
+protic species are not present. Configurations of type 5 are characterized by the hydroxyl group being in a \ce{{\textmu}1}--OH
+configuration. In this part of the simulations the system undergoes fast
+structural fluctuations which are rationalized by a combination of the two
+earlier described motions of translation and rotation on a multidimensional free
+energy plateau at about 90 kJ/mol. The complex intrinsic dynamic flexibility of the framework is shown in Figure \ref{fig:figure_Paper3c}.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper3c}
+	\caption[Different structures observed in the simulation window of
+	configuration 5, which are rationalized by the two motions presented in Figure
+	\ref{fig:figure_Paper3b}. The colors of the Zr atoms indicate their
+	coordination number.]{Different structures observed in the simulation window of
+	configuration 5, which are rationalized by the two motions presented in Figure
+	\ref{fig:figure_Paper3b}. The colors of the Zr atoms indicate their
+	coordination number. Reprinted from Ref.\cite{Hajek2018} with permission of the
+	Royal Society of Chemistry, copyright 2018.}
+	\label{fig:figure_Paper3c}
+\end{figure}
+\npar
+During the translation, rotation and combination of these two
+deformation modes, which are observed for configurations of type 4 and 5, we
+also saw substantial rearrangements of the coordination numbers of the various Zr
+atoms. The change in the coordination numbers of Zr can easily vary between 8
+and 6. This is directly connected to a remarkable intrinsic dynamic behavior of
+the system, where neighboring linkers decoordinate and are 
+stabilized by hydrogen bonding interactions with adjacent hydroxyl groups.
+Another important aspect is that linkers have the ability to reversibly
+decoordinate and coordinate to the Zr atoms being responsible for the
+extraordinary stability of the UiO--66 material, which is undoubtedly related to the oxophilic character of the metal ion. This study in which the activation
+process is entropically driven might eventually also lead to the
+formation of water, thus dehydration of UiO--66. All the activated processes in
+which defects on UiO--66 are formed may have a decisive effect on catalytic
+reactions. These defects which create active sites in the material may act as
+Lewis acid but also Br\o{}nsted acid or base sites as it has already been shown in literature.
+The performance of UiO--66 as a multifunctional catalyst was intensively
+investigated in \textbf{Paper IV} and \textbf{Paper V}.
+
+
+\subsection*{Effect of dehydration on catalysis}
+In the dehydration and other processes creating defects, the coordination number
+of Zr changes which has a decisive effect on the catalytic properties of the
+material. A profound molecular level understanding of these modifications on the
+strength of Br\o{}nsted and Lewis acid sites within MOFs is crucial to tune the catalytic
+activity for many acid--base catalyzed reactions. In \textbf{Paper IV} detailed
+molecular and experimental insights were gained on the influence of the degree
+of dehydration on the nature of the active sites in the catalysis of the
+Oppenauer oxidation \cite{Hajek2017}.
+The hydrated and dehydrated UiO--66 material with one linker defect was
+considered as a catalyst involving three different adjacent Zr active sites, as displayed in Figure
+\ref{fig:figure_Paper4a}.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper4a}
+	\caption{Representation of active sites on hydrated and dehydrated UiO--66 and
+	Zr--beta zeolite. In each configuration Zr Lewis acid sites
+	and Br\o{}nsted base sites are
+	encircled.}
+	\label{fig:figure_Paper4a}
+\end{figure}
+\npar
+On the Zr--beta zeolite the reaction mechanism of the
+reverse MPV reduction of aldehydes to ketones was
+unraveled by Boronat \textit{et al.}\cite{Boronat2006}. In the proposed
+mechanism well--defined and isolated Lewis acid and Br\o{}nsted base sites were shown to
+be involved in the lowest activated reaction path. A schematic representation of the
+resemblance between the active sites in UiO--66 and the Zr--beta zeolite is
+shown in Figure \ref{fig:figure_Paper4a}.
+The reactions where dehydrogenation of alcohols is involved represent an example
+in which acid-base centers of intermediate strength are required. Although the
+active sites on the Zr--beta zeolite look similar to the one on UiO--66 and the
+reaction mechanism of the MPV reduction seems to be rather understandable, 
+the role of the acid and base sites and structural modifications in the UiO--66
+remain to be investigated for fine--tuning catalytic properties. To
+study the influence of both missing linkers and dehydration of the structure on
+the catalytic activity and to elucidate the bifunctional, amphoteric nature of
+UiO--66, the Oppenauer oxidation of alcohols to carbonyl compounds was chosen as
+a model reaction.
+The Lewis acid character of differently coordinated Zr atoms was investigated by
+means of DFT calculations using furfural, a strong oxidant as a probe molecule.
+Surprisingly, the adsorption free energy at 393 K of this molecule on the three
+considered active sites varies of about 5 kJ/mol at PBE--D3 level of theory
+(Figure \ref{fig:free_energy_oxidation}, configuration 1).
+This clearly indicates that the Lewis acid strength of Zr atoms on hydrated and
+dehydrated material is preserved. Prenol was chosen as a primary alcohol to be
+oxidized to prenal. The co--adsorption of this molecule on adjacent Lewis acid site has almost equal strength on the three considered active sites indicating that the Lewis acidity is not significantly altered between hydrated and dehydrated material. The specific coordination number of Zr has a minor effect on the Lewis acid strength which is distributed over the Zr metal and the bond with the adjacent \ce{{\textmu}3}--O (configuration 2). The next step in the reaction mechanism
+represents the transition state of the deprotonation of the alcohol to the
+\ce{{\textmu}3}--O atom (Ts1). This step proceeds the fastest on the hydrated
+material indicating that it possesses stronger base sites than the dehydrated
+UiO-66. The free energy barrier amounts to 7.4 kJ/mol on the active site of the
+hydrated material and it increases to 36.7 kJ/mol and 50.9 kJ/mol, on the active
+site on the dehydrated UiO-66 7-- and 6--fold coordinated, respectively.
+Furthermore, the formed alkoxide is the most strongly stabilized on the hydrated material. From the geometrical analysis of Zr--\ce{{\textmu}3}--O distances we observed that the higher the coordination numbers of the involved
+zirconium atoms the more stable the alkoxide becomes. The Lewis acid and
+Br\o{}nsted base sites can attractively interact as electrons are less
+concentrated between the Zr and \ce{{\textmu}3}--O atoms. In the second
+transition state the atoms from the inorganic framework are not directly
+involved into the carbon-to-carbon hydride shift between two reacting molecules.
+The effects is immediately observed by similar energy barriers for this
+transformation on the hydrated and dehydrated UiO--66. The
+hydride shift gives rise to prenal, the desired product of the
+Oppenauer oxidation (configuration 4). Hereby, the hydrated UiO--66 was found as
+a better catalyst than the dehydrated material to facilitate the Oppenauer
+oxidation of prenol to prenal with furfural as an oxidative agent. The experimental results
+on the influence of both linker vacancies and hydration state of the UiO--66 framework on its catalytic performance confirmed theoretical predictions. A much higher activity was systematically found on the hydrated material. Within this work we showed that the properties of the material can be tuned by the pretreatment procedures and there is a fine cooperation between the Lewis acid and Br\o{}nsted base sites in
+the inorganic brick. This study also demonstrates that chemical properties of
+UiO--66 are similar to its \ce{ZrO2} precursor.
+
+\begin{figure}[ht]
+	\includegraphics[width=1.0\textwidth]{free_energy_oxidation}
+	\centering
+	\caption[Free energy profile of the Oppenauer oxidation of prenol with furfural
+	(periodic with PBE--D3) given at 393.15 K. Hydrated brick is indicated by a
+	blue line, while dehydrated 7-- and 6--fold coordinated Zr by a purple and
+	green line, respectively. X corresponds to: X = O in the hydrated and
+	dehydrated 7--fold material, and X=vacancy for the cluster with 6--fold Zr coordination. R
+	corresponds to the reactants in gas phase and the catalyst, P corresponds to
+	the final products in gas phase and the catalyst.]{Free energy profile of the Oppenauer oxidation of prenol with
+	furfural (periodic with PBE--D3) given at 393.15 K. Hydrated brick is indicated by a
+	blue line, while dehydrated 7-- and 6--fold coordinated Zr by a purple and
+	green line, respectively. X corresponds to: X = O in the hydrated and
+	dehydrated 7--fold material, and X=vacancy for the cluster with 6--fold Zr coordination. R
+	corresponds to the reactants in gas phase and the catalyst, P corresponds to
+	the final products in gas phase and the catalyst. Reprinted from Ref.
+	\cite{Hajek2017} with permission from Wiley--VCH Verlag, copyright 2017.}
+	\label{fig:free_energy_oxidation}
+\end{figure}
+
+
+\subsection*{Influence of water on the active catalytic sites}
+The adsorption of water by porous solids and their stability in water
+environment is essential for their application in catalysis. In this
+respect, chemical and hydrothermal stability of UiO--66 was proved by Leus
+\textit{et al.}\cite{Leus2016}. Creation of defects and disorders in the
+material occurs during the synthesis, and in this respect, a missing
+linker defect in the material can be seen as a removal of one negatively charged
+BDC linker. In such a way, a positive charge is created on the brick which has
+to be compensated. This can happen either by removing a positively charged
+proton, or by adsorbing a negative species such as a hydroxyl group to one of the
+coordinatively unsaturated Zr atoms. Experimentally the identification and
+characterization of the nature of defects in MOFs on the molecular level remains a very challenging task to
+achieve. Within the use of single--crystal X--ray diffraction (SXRD) the
+presence of terminating hydroxyl groups and/or coordinating water molecules on the
+defect sites of UiO--66 was observed by the group of Lillerud \cite{Oien2014}
+and the group of Yaghi \cite{Trickett2015}. Furthermore in the work of Yaghi \textit{et
+al.}\cite{Trickett2015}, an additional hydroxide anion per defect site was
+perceived to coordinate with a defective \ce{Zr-O-Zr} site. It was postulated that upon
+removal of one linker, two adjacent Zr atoms are capped with physisorbed water
+molecules and the charge compensating hydroxyl counterion is stabilized by a
+hydrogen bond with a neighboring \ce{{\textmu}3}--OH group. In \textbf{Paper II}
+we considered different configurations of coordinated water molecules on the
+open metal sites to determine the chemical nature of active sites. 
+In the simplest case, upon removal of a proton, also two Br\o{}nsted
+basic sites are created and these are the two oxo atoms from the framework that
+bridge the adjacent Zr atoms. The configuration with coordinatively unsaturated
+adjacent Lewis acid sites was taken as the reference structure R (Figure
+\ref{fig:figure_Paper2b}). In the latter case, the adsorption of one water
+molecule gives rise to an additional Br\o{}nsted acid and base sites, but the
+Lewis acid property of Zr is lost. Subsequently, more water molecules can be
+coordinated to the open metal sites, and several possibilities have been
+screened as reported in Figure \ref{fig:figure_Paper2b}. In all structures
+various possible Lewis and Br\o{}nsted sites are indicated which may have a
+decisive role in a catalytic reaction. 
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper2b}
+	\caption[Coordination free energies at reaction temperature of 351 K of one,
+	two and three water molecules at coordinatively unsaturated Zr--bricks in
+	defective UiO--66 with respect to a water coordination free site (site R). Free
+	energies (in black) are given in kJ/mol, and their decomposition into enthalpic
+	$\Delta H$ (blue) and entropic $-T \Delta S$ (gray) contributions. Energies
+	are resulting from periodic calculations with PBE--D3 level of theory. In each
+	configuration Lewis acid and Br\o{}nsted sites are indicated.]{Coordination free energies at reaction temperature of 351 K of one,
+	two and three water molecules at coordinatively unsaturated Zr--bricks in
+	defective UiO--66 with respect to a water coordination free site (site R). Free
+	energies (in black) are given in kJ/mol, and their decomposition into enthalpic
+	$\Delta H$ (blue) and entropic $-T \Delta S$ (gray) contributions. Energies
+	are resulting from periodic calculations with PBE--D3 level of theory. In each
+	configuration Lewis acid and Br\o{}nsted sites are indicated. Reprinted from
+	Ref. \cite{Caratelli2017} with permission from Elsevier, copyright 2017.}
+	\label{fig:figure_Paper2b}
+\end{figure}
+\npar
+\newpage
+The most stable configurations represent the structures of UiO--66 which defect
+site is capped by two or three water molecules. The physisorbed water molecule
+on the Lewis acid site immediately deprotonates to the \ce{{\textmu}3}--O atom.  
+The structure with the chemisorbed hydroxyl group and physisorbed water forms a
+strongly stable complex with a free energy difference of -94.4 kJ/mol compared
+to reference configuration R. The presence of a third water molecule stabilizes 
+this complex slightly more. The last configuration with three water molecules is
+indeed some kJ/mol more bonded on the free energy surface at 351 K. This study
+is complementary to the work of Ling and Slater \cite{Ling2016}, in which a
+detailed understanding into the coordination of water and charge balancing hydroxide ions was obtained by applying an MD approach.
+Ling and Slater \cite{Ling2016} showed that the structure proposed by Yaghi and
+co--workers \cite{Trickett2015} does not represent energetically the most stable
+configuration.
+Instead, the hydroxide ion coordinates to the Zr metal while two water molecules
+are physisorbed to the oxo and Zr atoms as shown in Figure \ref {fig:figure_Paper2b}. The water stabilization pattern is in agreement with what was observed in this work in
+\textbf{Paper II} and \textbf{Paper VII}. However, depending on the
+temperature and concentration of water molecules various proton shuttles may
+occur proving the dynamic Br\o{}nsted acidity of active sites in UiO--66. The
+beneficial influence of water on the reaction cycle of Fischer esterification of
+an organic carboxylic acid with methanol was shown in \textbf{Paper VII} in the combined theoretical and experimental work. The mechanism of this reaction was studied on the hydrated
+and dehydrated Zr Lewis acid sites of UiO--66. The complementary performance of
+Lewis and Br\o{}nsted sites was required to substantially increase the catalytic activity of the material. Moreover, the
+experimental data clearly indicated that the catalytic activity dropped upon
+removal of physisorbed water from UiO--66, which is in complete agreement with
+theoretical model \cite{Caratelli2017}.
+
+
+\subsection*{Effect of linker functionalization}
+In many MOFs catalyzed reactions the observed increased catalytic activity
+results from the formation of a large number of accessible active sites or
+linker functionalization. Vermoortele \textit{et al.}\cite{Vermoortele2012}
+demonstrated that the UiO--66 materials with electron--withdrawing groups
+substitution are notably more active for citronellal cyclization. Furthermore,
+in another study by Vermoortele \textit{et al.}\cite{Vermoortele2013} it was observed that more accessible pores and large amount of available open metal sites enhance the electronic
+effect of the nitro group. In this respect the synthesis
+procedures by combine use of TFA and HCl were crucial to modulate the material for desired
+applications and strengthen the Lewis acid character of the active sites. To
+obtain a profound molecular understanding on the modulation effect of TFA on the
+material reactivity we used the citronellal cyclization as a probe reaction for
+Lewis acid strength. In this simulation, the extended cluster model with
+coordinatively unsaturated adjacent Zr sites surrounded by two terephthalate
+linkers and one TFA was used. The remaining four linkers were replaced by
+formate groups. In Figure \ref{fig:citronellal} the free energy profile for
+conversion of citronellal to isopulegol is shown at 373 K. The
+electronic modulation effect of a TFA group on the nitro functionalized
+UiO--66(\ce{NO2}) results in stronger adsorption and leads to lower apparent
+barriers for the transition and product states when compared to the material
+without incorporated modulator and functionalization.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{citronellal}
+	\caption[Free energy profile of
+	conversion of citronellal towards isopulegol. Level of theory for
+	H, C, N, O, F: B3LYP/6--31+G(d)--D3//B3LYP/  4--31G*; Zr:
+	LANL2DZ, calculated at 373 K.]{Free
+	energy profile of conversion of citronellal towards isopulegol. Level of theory
+	for H, C, N, O, F: B3LYP/6--31+G(d)--D3//B3LYP/4--31G*; Zr:
+	LANL2DZ//LANL2DZ, calculated at 373 K. Adapted
+	form Ref. \cite{Vandichel2015} and Ref.
+	\cite{Vermoortele2012} with permission of the Royal Society of Chemistry,
+	copyright 2015 and Wiley--VCH Verlag, copyright 2012.}
+	\label{fig:citronellal}
+\end{figure}
+\npar
+\newpage
+Vermoortele \textit{et al.}\cite{Vermoortele2011} reported the
+amino--functionalized UiO--66(\ce{NH2}) as a highly selective catalyst for the cross--aldol
+condensation between benzaldehyde and heptanal (Figure \ref{fig:figure_Paper5a}). A similar conclusion 
+for the acetylisation of benzaldehyde was published by Timofeeva \textit{et
+al.}\cite{Timofeeva2014} and for the esterification reactions by Cirujano \textit{et
+al.}\cite{Cirujano2015}.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper5a}
+	\caption{Aldol condensation between benzaldehyde and heptanal (cross-- and
+	self--aldol condensations, respectively) and representation of two
+	catalysts with indicated possible active sites.}
+	\label{fig:figure_Paper5a}
+\end{figure}
+\npar
+The observed increased activity with comparison to the
+pristine UiO--66 was explained by the co--catalytic role of amino groups. The
+proposed experimental reaction mechanism was not verified on the molecular level,
+therefore in \textbf{Paper V} we aimed to obtain in--depth insight into the
+active sites for the aldol condensation reaction on the two catalysts,
+unraveling the true role of the amino group. The catalytic performance of
+UiO--66 and amino--functionalized UiO--66(\ce{NH2}) was evaluated for the
+cross-- and self--aldol condensation of propanal and benzaldehyde. To rationalize the
+reaction mechanism it was recommended to first use the extended cluster model followed
+by periodic calculations for the most probable mechanism. In line with what
+was earlier observed for UiO--66, the catalytic activity of this material has
+its origin in the presence of defects which are coordinatively unsaturated Lewis
+acid sites. For the aldol condensation on UiO--66 we proposed a six steps
+mechanism, shown in Figure \ref{fig:figure_Paper5b} which is initiated by the
+adsorption of two reactants on the adjacent Zr atoms. Furthermore, the
+bi--functional nature of UiO--66 was unraveled. To initiate the reaction, propanal was
+solely activated by deprotonation of the $\alpha$--carbon atom to the
+\ce{{\textmu}3}--O atom, which acts as a Br\o{}nsted
+base. We also investigated a pathway in which aldol condensation is initially
+Br\o{}nsted acid catalyzed by means of hydroxyl group from the inorganic
+framework but found higher free energy barriers \cite{Hajek2015}.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper5b}
+	\caption[Comparison of the free energy profiles for the cross--aldol
+	condensation on UiO--66(\ce{NH2}) and UiO--66. Level of theory for H, C, N, O: B3LYP/6--311++G(d,p)--D3//B3LYP/6--31G(d); Zr:
+	LANL2TZ// LANL2DZ, calculated at 393 K. R
+	corresponds to the reactants in gas phase and the cluster, P corresponds to the final
+	product and water in gas phase and the cluster.] {Comparison of
+	the free energy profiles for the cross--aldol condensation on UiO--66(\ce{NH2}) and UiO--66.
+	Level of theory for H, C, N, O: B3LYP/6--311++G(d,p)--D3//B3LYP/6--31G(d); Zr:
+	LANL2TZ//LANL2DZ, calculated at 393 K. R
+	corresponds to the reactants in gas phase and the cluster, P corresponds to the final
+	product and water in gas phase and the cluster. Reproduced from Ref.
+	\cite{Hajek2015} with permission of Elsevier, copyright 2015.}
+	\label{fig:figure_Paper5b}
+\end{figure}
+\npar
+To examine the catalytic performance of the amino--functionalized material, we
+studied the cross--aldol condensation which is initiated by the
+adsorption on the adjacent Zr Lewis acid.
+Nevertheless, the effects of the amino substitution during different steps in the reaction profile appears to be
+negligible, as it only lowers the adsorption of propanal and benzaldehyde. The
+strong adsorption of the reactants and the slightly lower activation free energy
+barrier for the UiO--66(\ce{NH2}) could point towards a higher activity of this
+material compared to the pristine UiO--66 (Figure \ref{fig:figure_Paper5b}).
+This observation was in agreement with many experimental works dedicated to
+condensation reactions in which the systematic increase in activity was obtained
+when the material was functionalized by electron--donating amino groups. It was commonly accepted that the cooperative work between the Zr Lewis sites and the amino Br\o{}nsted base sites resulted in high yields for
+this type of reactions. In some experimental works the direct role of the amino
+group as a base site was proposed \cite{Timofeeva2014, Yang2014, Gascon2009,
+Panchenko2014}. In this line, a further detailed theoretical mechanistic
+investigation on UiO--66(\ce{NH2}) was performed. The resulting free energy barriers at 393 K are highlighted in Figure \ref{fig:figure_Paper5c}. The
+deprotonation of propanol to the corresponding carbocation is about 80 kJ/mol higher activated on the amino group as a base site. Moreover the
+formation of hemiaminal was also investigated as this is an intermediate
+structure in the Knoevenagel condensation \cite{Cortese2011,
+Panchenko2014, Yang2014}. For this pathway, the free energy barrier between the
+pre--reactive complex and transition state goes up to 205.4 kJ/mol which
+indicates that the hydrogen bonding interaction between the amino group and the
+carboxyl oxygen of propanal does not reveal catalytic properties (Figure
+\ref{fig:figure_Paper5d}). Even though the imine formation is very highly
+activated it could happen with assistance of guest species which facilitate the proton shuttle, such as water. Hereby, it was demonstrated that on the
+amino--functionalized UiO--66(\ce{NH2}) the imine formation can happen as soon
+as water is present on the catalyst (Figure \ref{fig:figure_Paper5d}). 
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper5c}
+	\caption[The free energy barrier of the deprotonation on the oxo--atom (TSa:
+	purple), on the amino group (TSb: orange) and imine formation (TSc:
+	blue) on the cluster model. Level of theory for H, C, N, O: B3LYP/6--311++G(d,p)--D3//B3LYP/6--31G(d); Zr:
+	LANL2TZ// LANL2DZ, calculated at 393 K. Some critical distances are given in
+	\AA. The 'zig--zag' line in the schematic representation of the TS states corresponds to the terephthalate linker.] {The free energy barrier of the deprotonation on
+	the oxo--atom (TSa:
+	purple), on the amino group (TSb: orange) and imine formation (TSc:
+	blue) on the cluster model. Level of theory for H, C, N, O: B3LYP/6--311++G(d,p)--D3//B3LYP/6--31G(d); Zr:
+	LANL2TZ//LANL2DZ, calculated at 393 K. Some critical distances are given in \AA. The 'zig--zag' line in the schematic
+representation of the TS states corresponds to the terephthalate linker. Figure
+reproduced from Ref. \cite{Hajek2015} with permission of Elsevier, copyright
+2015.}
+	\label{fig:figure_Paper5c}
+\end{figure}
+\npar
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figure_Paper5d}
+	\caption[The free energy barrier of the hemiaminal formation with water as a
+	co--catalyst (TSc--w1 and TSc--w2: pink) and without assisting water molecule
+	(TSc: blue) on the cluster model. Level of theory for H, C, N, O: B3LYP/6--311++G(d,p)--D3//B3LYP/6--31G(d); Zr:
+	LANL2TZ//LANL2DZ, calculated at 393 K. Some critical distances are given in \AA. The 'zig--zag'
+	line in the schematic representation of the TS states corresponds to the
+	terephthalate linker.]{The free energy barrier of the hemiaminal
+	formation with water as a co--catalyst (TSc--w1 and TSc--w2: pink) and without assisting water molecule
+	(TSc: blue) on the cluster model. Level of theory for H, C, N, O: B3LYP/6--311++G(d,p)--D3//B3LYP/6--31G(d); Zr:
+	LANL2TZ//LANL2DZ, calculated at 393 K. Some critical distances are given in \AA. The 'zig--zag'
+	line in the schematic representation of the TS states corresponds to the
+	terephthalate linker. Figure reproduced from Ref. \cite{Hajek2015} with
+	permission of Elsevier, copyright 2015.}
+		\label{fig:figure_Paper5d}
+\end{figure}
+\npar
+Furthermore, in the jasminaldehyde condensation
+water is produced as a side product and could assist in the reaction mechanism
+in the steps where proton transfers are involved. In \textbf{Paper VIII} it was
+indeed shown that polar protic solvents like methanol form a
+hydrogen--bonded network allowing protons to shuttle between the solvent,
+adsorbed water and the inorganic brick. As protons can easily shuttle among
+various positions on the defective sites, the active sites show a remarkable
+dynamic behavior \cite{Caratelli2017a}.
+\npar
+In the complementary experimental study performed in the group of Prof. Dirk
+De Vos the superior initial conversion of propanol which results in the
+higher initial selectivity for the cross aldol product on UiO--66(\ce{NH2}) was
+also confirmed. However, after prolonged reaction time the experimental data predicts a comparable performance of both catalysts.
+\npar
+Summarizing, in \textbf{Paper V} we unraveled that amino functionalized BDC
+linkers possess an electron--donating character but this group as a base is not
+actively involved in the reaction mechanism, indicating that the proposed mechanism of aldol condensation is similar on the
+pristine and amino substituted UiO--66.
+\npar
+These findings are confirmed in \textbf{Paper VII} where it was observed that
+amino groups yield a decrease in the reaction barriers which is in alignment
+with experimental observations performed in  the group of Dr. Francesc X.
+Llabr\'es i Xamena. They have an active and substantial role in modulating the
+electronic structure of the material but a passive role in the reaction
+mechanism \cite{Caratelli2017}.
+
+
+\section{Contributions to other articles}
+In addition to the main research projects presented in the previous sections, a
+small contribution was made to study the nature of active sites in Ca--modified
+ZSM--5 for MTO conversion. It concerned a combined
+experimental--theoretical \textbf{Paper XI} and is briefly summarized
+below \cite{Yarulina2016}.
+
+
+\subsection*{Acid site modification with Ca}
+Within the field of catalysis, many researchers are continuously searching for
+suitable modifications of the catalyst to improve its performance, to direct the
+product selectivity and to prolong the lifetime of the catalyst. Within the MTO
+process it is commonly accepted that there exists a dual--cycle mechanism,
+involving the presence of two cycles, a methylation/cracking cycle leading
+especially to propylene production and an aromatic cycle, responsible for
+ethylene and aromatics formation. The latter feature is responsible for catalyst
+deactivation. The aromatics formation can be suppressed by a combination of a
+decreased number and strength of acid sites and an altered accessible pore size. 
+In \textbf{Paper XI} the ZSM--5 acidity was modified by Ca incorporation.
+Experimentally a reduction of the aromatics formation has been measured. To give
+some molecular insight, periodic DFT calculations have been performed to
+investigate the consequence of incorporating Ca into H--ZSM--5. CaOCaOH\ce{^+}
+species are formed and may show multiple structures coordinated to the framework
+oxygen atoms near the Al substitution. In the
+paper it was demonstrated that CaOCaOH\ce{^+} moieties might replace the
+original Br\o{}nsted acid sites and form Lewis acid sites, which were found to catalyze methanol
+conversion. \textbf{Paper XI} was the onset of a more elaborate study which is
+still going on, and in which various researchers of the CMM are involved (Dr.
+Kristof De Wispelaere and Simon Bailleul). The project was initiated and
+performed in the collaboration with the group of Prof. Jorge Gascon.
+
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
