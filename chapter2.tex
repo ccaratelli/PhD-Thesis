@@ -27,14 +27,13 @@ On the one hand, it is crucial to use a computational model that captures all th
 \subsection*{Extended cluster model}
 A very computationally efficient approach consists in neglecting periodicity and extracting a finite cluster of atoms from the periodic structure. This cluster model, displayed in Fig. \ref{fig:cluster-periodic}, contains the active sites and their surroundings but consists in a limited number of atoms, allowing to substantially decrease the computational cost. 
 This allows both a more accurate treatment of the electronic structure, and a screening of different possible geometrical configurations of adsorbates, which is useful in the search for transition states (TS). Moreover, very efficient TS searching algorithms have been developed for such systems in Gaussian, the most widely used code for cluster calculations.
-When extracting a cluster, particular attention has to be drawn to the termination of bonds and the charge compensation, that have to be done in the most realistic way. The rest of the crystal structure does not surround the external cluster atoms. Some of these atoms need to be fixed in order to mimic the periodic environment and prevent nonphysical deformations that would affect an estimation of the entropy \cite{DeWispelaere2018}.
-
 \begin{figure}[!htbp]
 	\centering
  	\includegraphics[width=1.0\textwidth]{cluster-periodic}
 	\caption{Left: extended cluster model cut from the periodic structure of UiO--66. The cluster contains the active site, the brick and the linkers in the closest proximity to the active site. Right: representation of the unit cells containing the defect. In blue, the conventional 4--brick unit cell, in orange, the 2--brick unit cell used for the calculations. The two different bricks are highlighted in orange. The 10--fold coordinated brick has two terephthalate linkers missing.}
 	\label{fig:cluster-periodic}
 \end{figure}
+When extracting a cluster, particular attention has to be drawn to the termination of bonds and the charge compensation, that have to be done in the most realistic way. The rest of the crystal structure does not surround the external cluster atoms. Some of these atoms need to be fixed in order to mimic the periodic environment and prevent nonphysical deformations that would affect an estimation of the entropy \cite{DeWispelaere2018}.
 \npar
 Cluster calculations are an excellent way to benchmark and perform a first qualitative screening of reactions and possible configurations and have been for long the standard computational tool when studying reaction in nanoporous materials. However, they are not adequate to correctly describe complex reactive processes, where confinement effect of the pores and structural rearrangements can play an important role. The role of solvent in the pores can also be crucial for the outcome of a reaction and cannot be explicitly studied by cluster models. Periodic calculations resolve this shortcoming, and as computational power grows, the heterogeneous catalysis community is shifting towards these more expensive, however more accurate models. 
 
@@ -66,7 +65,7 @@ where $\psi$ is the wavefunction, $\hat{H}$ is the Hamiltonian of the system, an
 \begin{figure}[!htbp]
 	\centering
  	\includegraphics[width=1.0\textwidth]{BO-approx}
-	\caption{The two lowest PES in the BO approximation for a diatomic molecule. In blue, the electronic PES for the ground state and first electronic excited state (UV--Vis transition). In orange, the vibrational energy levels (IR transitions), in grey the rotational levels (microwave transitions.}
+	\caption{The two lowest PES in the BO approximation for a diatomic molecule. In blue, the electronic PES for the ground state and first electronic excited state (UV--Vis transitions). In orange, the vibrational energy levels (IR transitions), in grey the rotational levels (microwave transitions).}
 	\label{fig:BO-approx}
 \end{figure}
 
@@ -77,7 +76,7 @@ This approximation does not always hold, especially when dealing with light nucl
 
 \begin{figure}[!htbp]
 	\centering
- 	\includegraphics[width=0.5\textwidth]{forcefield}
+ 	\includegraphics[width=0.7\textwidth]{forcefield}
 	\caption{Representation of some of the molecular modes taken into account in a generic force field model.}
 	\label{fig:forcefield}
 \end{figure}
@@ -123,17 +122,16 @@ E(V) = E_{0} +
 Where $B_0$ and $B'_{0}$ are the bulk modulus and its derivative. A new structure is then generated at this given volume and coordinates and unit cell parameters are optimized again.
 
 \subsection*{Molecular vibrations}
-As seen in the previous paragraph, for many purposes in this thesis we need to calculate the second order derivatives (Hessian matrix) of the PES, which are associated to molecular vibrations. First of all, the Hessian gives us information about the curvature of the surface and the nature of the stationary points encountered during the minimization. The second order derivatives are obtained by displacing the atoms in the three directions and calculating the energies, then the Hessian is diagonalized to determine the eigenvectors that correspond to the vibrational motions. 
+As seen in the previous paragraph, for many purposes in this thesis we need to calculate the second order derivatives (Hessian matrix) of the PES, which are associated to molecular vibrations. First of all, the Hessian gives us information about the curvature of the surface and the nature of the stationary points encountered during the minimization. The second order derivatives are obtained by displacing the atoms in the three directions and calculating the energies, then the Hessian is diagonalized to determine the eigenvectors that correspond to the vibrational motions.
 From the Hessian we can calculate the vibrational frequencies, which open the door to a lot more information on the system than a single point calculation. As a matter of fact, single point calculations are performed at 0 K, but even at this temperature nuclei vibrate around their equilibrium positions, and this movements are responsible for vibrational entropy. We can approximate these motions with those of harmonic oscillators, by using the vibrational frequencies constructed from the Hessian. 
 \npar
-These frequencies can then be used to estimate the value of the vibrational entropy at finite temperatures, as will be explained later. In the calculations performed in this thesis, due to computational limits, a partial Hessian approach (PHVA) was used when dealing with reactions, as implemented in the TAMkin toolkit \cite{Ghysels2010}. The quantity that needs to be derived from these calculations is the change in free energy, which mainly depends on the parts of the system that change during the reaction, in the case of a heterogeneous catalyst the active site and the adsorbed reactants. Therefore, restricting the entropy calculations only to this part of the system is a good approximation that allows to decrease enormously the computational cost \cite{Ghysels2007}. This approach has been used in the calculation of the free energy barriers for the Fischer esterification on UiO--66 (\textbf{PAPER I}), where the atoms taken into account were the adsorbed reactants and four atoms of the active sites in their immediate proximity, as displayed in Figure \ref{fig:PHVA}.
-
 \begin{figure}[!htbp]
 	\centering
  	\includegraphics[width=1.0\textwidth]{PHVA}
-	\caption{representation of the atoms taken into account in the PHVA approach. Top: a schematic representation of a reactive process in nanoporous material, bottom: a snapshot from the static calculations where the atoms of the active site and the adsorbates are highlighted}
+	\caption{Representation of the atoms taken into account in the Partial Hessian Vibrational Analysis (PHVA) approach. Top: a schematic representation of a reactive process in nanoporous material, bottom: a snapshot from the static calculations where the atoms of the active site and the adsorbates are highlighted}
  \label{fig:PHVA}
 \end{figure}
+These frequencies can then be used to estimate the value of the vibrational entropy at finite temperatures, as will be explained later. In the calculations performed in this thesis, due to computational limits, a partial Hessian approach (PHVA) was used when dealing with reactions, as implemented in the TAMkin toolkit \cite{Ghysels2010}. The quantity that needs to be derived from these calculations is the change in free energy, which mainly depends on the parts of the system that change during the reaction, in the case of a heterogeneous catalyst the active site and the adsorbed reactants. Therefore, restricting the entropy calculations only to this part of the system is a good approximation that allows to decrease enormously the computational cost \cite{Ghysels2007}. This approach has been used in the calculation of the free energy barriers for the Fischer esterification on UiO--66 (\textbf{PAPER I}), where the atoms taken into account were the adsorbed reactants and four atoms of the active sites in their immediate proximity, as displayed in Figure \ref{fig:PHVA}.
 
 \section{Free energy}
 The central thermodynamic quantity that determines the outcome of a reaction is the free energy change associated to the process. In general, a chemical system will undergo changes in a direction that minimizes its free energy, until an equilibrium is reached. Knowing the difference in free energy between reactants and products allows us to know the equilibrium constant for a given reaction. The Gibbs Free energy can be decomposed in an enthalpic and an entropic contribution, that can be evaluated from the simulations knowing the molecular partition functions. Initially, the total internal energy $U$ has to be obtained from the electronic energy $\varepsilon_0$, the zero--point vibrational energy $E_{ZPE}$ and the molecular partition function $Q$ at constant number of particles $n$ and volume $V$:
@@ -202,12 +200,18 @@ This theory has some limitations, and may fail in the case of labile intermediat
 \begin{figure}[!htbp]
 	\centering
  	\includegraphics[width=1.0\textwidth]{static-scheme}
-	\caption{Static reaction profile for a reactive process with and without catalys }
+	\caption{1D free energy profiles for a given reaction with and without catalyst, indicating the adsorbed initial, final states and the localized transition state, schematically illustrated in below. The adsorption free energy, intrinsic and apparent barriers are obtained by static calculations and indicated by $\Delta G_{ads}$, $\Delta G_{\ddagger}$, and $\Delta G_{app}$, respectively;}
 	\label{fig:static-scheme}
 \end{figure}
 
 \section{Exploring the free energy surface}
-Static calculations, where molecular vibrations are approximated using harmonic oscillators, can fail to give an accurate representation of the entropy when there is a high configurational freedom. When the FES is flat with respect to $k_B T$, the system at equilibrium can evolve in a larger region of the PES and move along more than one \textit{minimum}. In this case, vibrational frequencies are anharmonic and it is not possible to represent the system by approximating around one single \textit{minimum}. Therefore, static calculations are not always sufficient in describing the system at operating conditions. In this view, molecular dynamics (MD) techniques, which follow the time evolution of the system, can resolve this shortcoming.
+Static calculations, where molecular vibrations are approximated using harmonic oscillators, can fail to give an accurate representation of the entropy when there is a high configurational freedom. When the FES is flat with respect to $k_B T$, the system at equilibrium can evolve in a larger region of the PES and move along more than one \textit{minimum}. In this case, vibrational frequencies are anharmonic and it is not possible to represent the system by approximating around one single \textit{minimum} (Fig. \ref{fig:static-dynamic}). Therefore, static calculations are not always sufficient in describing the system at operating conditions. In this view, molecular dynamics (MD) techniques, which follow the time evolution of the system, can resolve this shortcoming.
+\begin{figure}[!htbp]
+	\centering
+ 	\includegraphics[width=1.0\textwidth]{static-dynamic}
+	\caption{a) 1D free energy profiles for a given reaction on two different active sites in UiO--66 (insets), indicating the adsorbed initial and final states and the localized transition state for this reaction; (b) possible 2D representation of the given reaction on the two active sites as obtained using advanced dynamic techniques, indicating the three critical points on the potential energy surface.}
+	\label{fig:static-dynamic}
+\end{figure}
 
 \subsection*{Ab initio Molecular Dynamics}
 From MD simulations, thermodynamic properties such as free energy can be obtained taking into account a whole region of the PES instead of a single point. This is based on the ergodic theorem, that in one of its formulations states that the time average of equilibrium properties is equal to the ensemble average, in the limit of a sufficient long simulation. 
@@ -241,14 +245,14 @@ With the growth in computational time, the new challenge is constituted by model
 \subsection*{Enhanced sampling MD methods}
 MD simulations can offer valuable insights into the behavior of a chemical system at equilibrium conditions. From these simulations, many properties can be extracted, such as equilibrium geometries, vibrational spectra, diffusion coefficients, structural parameters etc. Configurations associated to higher (or lower) values of potential energy will be sampled for shorter (or longer) times, and in principle, if a certain process is sufficiently sampled, based on the ergodic theorem we can know its equilibrium constant, and in turn the free energy barrier associated to it. However, chemical reactions, where bonds are broken and formed, are generally rare events that will not be sampled with a regular exploration of the PES. If the free energy barrier is high compared to $k_{B}T$, the probability that such event would spontaneously occur during the simulation time is practically none. This is especially true for complex molecular systems, in which processes occur in different time scales and that can only be simulated for a limited amount of time. For this reason, different enhanced sampling techniques have been developed to enhance the sampling of low probability regions of the free energy landscape \cite{valsson2016enhancing, laio2002escaping, sutto2012new, carter1989constrained, darve2001calculating, jarzynski1997nonequilibrium, rosso2002use, gullingsrud1999reconstructing}. Recently, enhanced sampling techniques have been successfully applied in heterogeneous catalysis to study processes at operating conditions \cite{dewispelaere2016insight, dewispelaere2015complex, vanspeybroeck2014first, cnudde2017effect, haigis2015hydrothermal, buvcko2011monomolecular, fraux2017recent}.
 \npar
-There are two main classes of methods that can be used to explore rare events on the free energy surface. The first class is characterized by methods that encompass all degrees of freedom and do not need any prior information on the free energy landscape between two points. Examples of these methods are Transition Path Sampling (TPS) \cite{dellago2002transition} and Replica exchange (RE) \cite{sugita1999replica}. The other class of techniques encompasses methods in which the sampling is enhanced along certain coordinates of the system, such as Umbrella Sampling (US) \cite{torrie1977nonphysical, patey1975monte} and Metadynamics (MTD) \cite{laio2002escaping}, shown in Fig. \ref{fig:dynamic-scheme}.
-
 \begin{figure}[!htbp]
 	\centering
  	\includegraphics[width=1.0\textwidth]{dynamic-scheme}
 	\caption{Schematic representation of different MD techniques that can be used to explore the PES.}
 	\label{fig:dynamic-scheme}
 \end{figure}
+
+There are two main classes of methods that can be used to explore rare events on the free energy surface. The first class is characterized by methods that encompass all degrees of freedom and do not need any prior information on the free energy landscape between two points. Examples of these methods are Transition Path Sampling (TPS) \cite{dellago2002transition} and Replica exchange (RE) \cite{sugita1999replica}. The other class of techniques encompasses methods in which the sampling is enhanced along certain coordinates of the system, such as Umbrella Sampling (US) \cite{torrie1977nonphysical, patey1975monte} and Metadynamics (MTD) \cite{laio2002escaping}, shown in Fig. \ref{fig:dynamic-scheme}.
 
 
 \subsubsection*{Choice of collective variable}
