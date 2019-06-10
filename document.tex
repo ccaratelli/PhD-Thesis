@@ -149,7 +149,7 @@
 \vspace{0.5cm}
 
  \hspace{-\parindent}\begin{minipage}{0.7\textwidth}
- \hspace{-\parindent}Chair: prof. dr. ir. C. Leys \\
+ \hspace{-\parindent}Chair: prof. em. dr. ir. L. Taerwe \\
   \hspace{-\parindent}Faculty of Engineering and Architecture\\
   \hspace{-\parindent}Ghent University\\
   \hspace{-\parindent}Academic year 2018--2019
@@ -200,10 +200,9 @@ Van 't Hoff Institute for Molecular Sciences, Universiteit Van Amsterdam (Prof. 
 %\selectlanguage{dutch}
 \frontmatter
 \pagenumbering{gobble}
-\include{dedication}  %chiara decomment this
-\include{voorwoord}   %chiara decomment this
-
-\newpage\null\thispagestyle{empty}\newpage
+%\include{dedication}  %chiara decomment this
+%\include{voorwoord}   %chiara decomment this
+%\newpage\null\thispagestyle{empty}\newpage %chiara decomment this
 \thispagestyle{empty}
 
 \pagenumbering{roman}
@@ -220,6 +219,7 @@ Van 't Hoff Institute for Molecular Sciences, Universiteit Van Amsterdam (Prof. 
    % \listoftables
 	  %  \printglossary[title=List of Abbreviations] % toctitle=Terms and
 	  %  \clearpage{\pagestyle{empty}\cleardoublepage}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 \input{abbreviations}
 \input{symbols}
 
@@ -272,12 +272,13 @@ Van 't Hoff Institute for Molecular Sciences, Universiteit Van Amsterdam (Prof. 
 \include{chapter4}
 
 \part{Published papers}
-%\include{papers}
+\include{papers}
 
 \selectlanguage{english}
 
 \appendix
 \include{appendix1}
+\include{tier1}
 %\include{appendix2}
 %\include{appendix3}
 \bibliographystyle{ieeetr}
